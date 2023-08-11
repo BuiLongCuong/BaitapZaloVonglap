@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bài 1: In ra 100 chữ 'Hello'</h1>
+<button onclick="bai1()">IN</button>
+<script>
+    function bai1() {
+        for (let i = 0; i<100 ;i++) {
+            document.write(i+".Hello<br>");
+        }
+    }
+</script>
+<h1>Bài 2: Nhập vào n từ prompt. In ra n lần chữ 'Hello'</h1>
+<button onclick="bai2()">IN</button>
+<script>
+    function bai2() {
+        let n = +prompt("Nhập số lần muốn in :")
+        for (let i = 0; i < n; i++) {
+            document.write(i + ".Hello ")
+        }
+    }
+</script>
+<h1>Bài 3: In ra các số từ 1 đến 1000</h1>
+<button onclick="bai3()">IN</button>
+<script>
+    function bai3() {
+        for (let i = 0; i <=1000; i++) {
+            console.log(i);
+        }
+    }
+</script>
+<h1>Bài 4: Nhập vào a, b. In ra các số từ a đến b</h1>
+<button onclick="bai4()">IN</button>
+<script>
+    function bai4() {
+        let a=+prompt("Nhập số a:");
+        let b=+prompt("Nhập số b:");
+        for (let i = a; i <=b ; i++) {
+            document.write(i);
+        }
+    }
+</script>
+<h1>Bài 5: Nhập vào a, b. In ra các số từ a đến b, mỗi số trong 1 thẻ h1</h1>
+<button onclick="bai5()">IN</button>
+<script>
+    function bai5() {
+        let a=+prompt("Nhập số a:");
+        let b=+prompt("Nhập số b:");
+        for (let i = a; i <=b ; i++) {
+            document.write("<h1>" +i+ "</h1>");
+        }
+    }
+</script>
+<h1>Bài 6: Nhập vào a, b. In ra các số chẵn từ a đến b;</h1>
+<button onclick="bai6()">IN</button>
+<script>
+    function bai6() {
+        let a=+prompt("Nhập số a:");
+        let b=+prompt("Nhập số b:");
+        for (let i = a; i <=b ; i++) {
+            if(i%2===0){
+                document.write(i+",");
+            }
+        }
+    }
+</script>
+<h1>Bài 7: Nhập vào a, b. In ra các số từ a đến b số chẵn trong h2, số lẻ trong h1</h1>
+<button onclick="bai7()">IN</button>
+<script>
+    function bai7() {
+        let a=+prompt("Nhập số a:");
+        let b=+prompt("Nhập số b:");
+        for (let i = a; i <=b ; i++) {
+            if(i%2===0){
+                document.write("<h2>" +i+ "</h2>")
+            }else{
+                document.write("<h1>" +i+ "</h1>")
+            }
+        }
+    }
+</script>
+<h1>Bài 8: Nhập vào a, b . Tính tích a đến b.</h1>
+<button onclick="bai8()">Tính</button>
+<script>
+    function bai8() {
+        let a=+prompt("Nhập số a:");
+        let b=+prompt("Nhập số b:");
+        let luutru=1;
+        for (let i = a; i <=b ; i++) {
+            luutru *=i;
+        } document.write(luutru);
+    }
+</script>
+<h1>Bài 9: Nhập vào a, b. Tính Tổng các số chia 5 dư 2 từ a đến b.</h1>
+<button onclick="bai9()">Tính</button>
+<script>
+    function bai9() {
+        let a=+prompt("Nhập số a:");
+        let b=+prompt("Nhập số b:");
+        let so=0;
+        for (let i = a; i <=b ; i++) {
+            if(i%5===2){
+                so+=i;
+            }
+        }document.write(so);
+    }
+</script>
+<h1>Bài 10: Nhập vào a, b.  Đếm các số chia 5 dư 2 từ a đến b</h1>
+<button onclick="bai10()">Thực hiện</button>
+<script>
+    function bai10() {
+        let a=+prompt("Nhập số a:");
+        let b=+prompt("Nhập số b:");
+        let data=0;
+        for (let i = a; i <=b ; i++) {
+            if(i%5===2){
+                data++;
+            }
+        }document.write("Có "+data+" số chia 5 dư 2.")
+    }
+</script>
+<h1>Bài 11: In ra màn hình 0, 5 ,10,15, 20, ... 50.</h1>
+<button onclick="bai11()">In</button>
+<script>
+    function bai11() {
+        for (let i = 0; i <=50 ; i++) {
+            if(i%5===0){
+                document.write(i+"  ");
+            }
+        }
+    }
+</script>
+<h1>Bài 12: In ra  màn hình 10, 9, 8, 7, 6, ... 0.</h1>
+<button onclick="bai12()">In</button>
+<script>
+    function bai12() {
+        for (let i = 10; i >=0 ; i--) {
+            document.write(i+"  ")
+        }
+    }
+</script>
+<h1>Bài 13: In ra màn hình 50, 45, 40, .. 0 </h1>
+<button onclick="bai13()">In</button>
+<script>
+    function bai13() {
+        for (let i = 50; i >=0 ; i--) {
+            if(i%5===0){
+                document.write(i+"  ");
+            }
+        }
+    }
+</script>
+<h1>Bài 14: In ra bảng cửu chương 5.</h1>
+<button onclick="bai14()">In</button>
+<script>
+    function bai14() {
+        for (let i = 5; i <=5 ; i++) {
+            for (let j = 1; j <=10; j++) {
+                document.write(i+"*"+j+"="+(i*j)+"<br>")
+            }
+        }
+    }
+</script>
+</body>
+</html>
